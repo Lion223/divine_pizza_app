@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{16423316-AFC3-46FD-9BA4-E0D0321967FB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DivinePizzaUI</RootNamespace>
+    <AssemblyName>DivinePizzaUI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=1.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.1.1.2\lib\net451\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.5.1.2\lib\net451\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data">
+      <HintPath>..\packages\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.5.1.2\lib\net451\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Twilio, Version=5.16.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Twilio.5.16.3\lib\net451\Twilio.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppFormUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppFormUI.Designer.cs">
+      <DependentUpon>AppFormUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrinksUserUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DrinksUserUI.Designer.cs">
+      <DependentUpon>DrinksUserUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginFormUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginFormUI.Designer.cs">
+      <DependentUpon>LoginFormUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailFormUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MailFormUI.Designer.cs">
+      <DependentUpon>MailFormUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderFormUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderFormUI.Designer.cs">
+      <DependentUpon>OrderFormUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PizzasUserUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PizzasUserUI.Designer.cs">
+      <DependentUpon>PizzasUserUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SaladsUserUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SaladsUserUI.Designer.cs">
+      <DependentUpon>SaladsUserUI.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AppFormUI.resx">
+      <DependentUpon>AppFormUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrinksUserUI.resx">
+      <DependentUpon>DrinksUserUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginFormUI.resx">
+      <DependentUpon>LoginFormUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailFormUI.resx">
+      <DependentUpon>MailFormUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderFormUI.resx">
+      <DependentUpon>OrderFormUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PizzasUserUI.resx">
+      <DependentUpon>PizzasUserUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SaladsUserUI.resx">
+      <DependentUpon>SaladsUserUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facebook-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\envelope-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\instagram-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drinks-whiteicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pizzas-whiteicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salads-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drinks-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pizzas-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salads-whiteicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-mail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic-pizza1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic-pizza3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic-pizza2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic-pizza4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boxes-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic-pizza6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic-pizza5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic-drink2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic-drink1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic-drink6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic-drink5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic-drink4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic-drink3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic-salad5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic-salad4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic-salad3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic-salad2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic-salad1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic-salad6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\changeuser-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkcode-icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
